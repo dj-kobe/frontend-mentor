@@ -1,0 +1,499 @@
+/* ============================================================
+   Shortly – Landing Page Stylesheet
+   Font: Poppins (400, 500, 600, 700, 800) via Google Fonts
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* ─── RESET & BASE ─────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── DESIGN TOKENS ────────────────────────────────────────── */
+
+:root {
+  --cyan:            #2acfcf;
+  --dark-violet:     #3a3054;
+  --very-dark-blue:  #232127;
+  --gray:            #bfbfbf;
+  --light-gray:      #f0f1f6;
+  --grayish-violet:  #9e9aa8;
+  --red:             #f46262;
+  --white:           #ffffff;
+}
+
+/* ─── BODY ─────────────────────────────────────────────────── */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--very-dark-blue);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+/* ─── NAVIGATION ───────────────────────────────────────────── */
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 0 160px;
+  height: 80px;
+  background: var(--white);
+}
+
+.nav-logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--very-dark-blue);
+  text-decoration: none;
+  margin-right: 48px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  flex: 1;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--grayish-violet);
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--very-dark-blue);
+}
+
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-auth a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.nav-login {
+  color: var(--grayish-violet);
+}
+
+.nav-login:hover {
+  color: var(--very-dark-blue);
+}
+
+/* ─── BUTTONS ──────────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Small pill – nav Sign Up */
+.btn-cyan {
+  background: var(--cyan);
+  color: var(--white);
+  border-radius: 100px;
+  padding: 10px 24px;
+  font-size: 0.875rem;
+}
+
+/* Large pill – hero / CTA */
+.btn-cyan-pill {
+  background: var(--cyan);
+  color: var(--white);
+  border-radius: 100px;
+  padding: 14px 40px;
+  font-size: 1rem;
+}
+
+/* ─── HERO ─────────────────────────────────────────────────── */
+
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 40px 160px 60px;
+  position: relative;
+  overflow: hidden;
+  min-height: 480px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 520px;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--very-dark-blue);
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  color: var(--grayish-violet);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 360px;
+}
+
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Rounded background blob behind illustration */
+.hero-bg-circle {
+  position: absolute;
+  right: -80px;
+  top: -40px;
+  width: 520px;
+  height: 420px;
+  background: var(--light-gray);
+  border-radius: 50% 0 0 50%;
+  z-index: 0;
+}
+
+.hero-illustration {
+  position: relative;
+  z-index: 2;
+  width: 480px;
+}
+
+/* ─── SHORTEN SECTION ──────────────────────────────────────── */
+
+.shorten-section {
+  background: var(--light-gray);
+  padding: 0 160px 56px;
+}
+
+/* Dark violet card that overlaps the hero / stats boundary */
+.shorten-bar {
+  background: var(--dark-violet);
+  border-radius: 16px;
+  padding: 48px 56px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-32px);
+}
+
+/* Decorative circles inside the card */
+.shorten-bar::before,
+.shorten-bar::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.shorten-bar::before {
+  width: 200px;
+  height: 200px;
+  top: -80px;
+  right: 60px;
+}
+
+.shorten-bar::after {
+  width: 120px;
+  height: 120px;
+  bottom: -50px;
+  right: 200px;
+}
+
+.shorten-input {
+  flex: 1;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: var(--very-dark-blue);
+  outline: none;
+}
+
+.shorten-input::placeholder {
+  color: var(--gray);
+}
+
+.shorten-input:focus {
+  border-color: var(--cyan);
+}
+
+.btn-shorten {
+  background: var(--cyan);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 16px 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.btn-shorten:hover {
+  opacity: 0.8;
+}
+
+/* ─── STATISTICS SECTION ───────────────────────────────────── */
+
+.stats-section {
+  background: var(--light-gray);
+  padding: 24px 160px 100px;
+  text-align: center;
+}
+
+.stats-section h2 {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: var(--very-dark-blue);
+  margin-bottom: 16px;
+}
+
+.stats-section > p {
+  font-size: 0.9375rem;
+  color: var(--grayish-violet);
+  max-width: 420px;
+  margin: 0 auto 72px;
+  line-height: 1.8;
+}
+
+/* ─── FEATURE CARDS ROW ────────────────────────────────────── */
+
+.cards-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  position: relative;
+}
+
+/* Horizontal cyan connector line between cards */
+.cards-row::before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: calc(33.33% - 24px);
+  right: calc(33.33% - 24px);
+  height: 8px;
+  background: var(--cyan);
+  z-index: 0;
+}
+
+/* Individual card */
+.card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 80px 28px 32px;
+  flex: 1;
+  position: relative;
+  text-align: left;
+  z-index: 1;
+}
+
+/* Stagger cards vertically */
+.card:nth-child(2) {
+  margin-top: 40px;
+}
+
+.card:nth-child(3) {
+  margin-top: 80px;
+}
+
+/* Circular icon badge */
+.card-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--dark-violet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -36px;
+  left: 28px;
+}
+
+.card-icon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.card h3 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--very-dark-blue);
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: var(--grayish-violet);
+  line-height: 1.8;
+}
+
+/* ─── CTA BAND ─────────────────────────────────────────────── */
+
+.cta-band {
+  background: var(--dark-violet);
+  padding: 56px 160px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative blobs */
+.cta-band::before,
+.cta-band::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.cta-band::before {
+  width: 340px;
+  height: 340px;
+  bottom: -160px;
+  left: -80px;
+}
+
+.cta-band::after {
+  width: 220px;
+  height: 220px;
+  top: -100px;
+  right: 100px;
+}
+
+/* Full-bleed SVG wave overlay */
+.cta-band-waves {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cta-band-waves svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cta-band h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-band .btn-cyan-pill {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── FOOTER ───────────────────────────────────────────────── */
+
+footer {
+  background: var(--very-dark-blue);
+  padding: 60px 160px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--white);
+  text-decoration: none;
+  margin-right: auto;
+  flex-shrink: 0;
+}
+
+.footer-col {
+  min-width: 120px;
+}
+
+.footer-col h4 {
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 12px;
+}
+
+.footer-col a {
+  color: var(--gray);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover {
+  color: var(--cyan);
+}
+
+/* Social icons */
+.footer-social {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.footer-social a {
+  color: var(--white);
+  transition: color 0.2s;
+}
+
+.footer-social a:hover {
+  color: var(--cyan);
+}
+
+.footer-social svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}

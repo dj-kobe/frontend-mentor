@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shortly – More than just shorter links</title>
+  <link rel="stylesheet" href="style2.css"/>
+</head>
+<body>
+
+<!-- ─── NAV ─────────────────────────────────────────────────── -->
+<nav>
+  <a href="#" class="nav-logo">Shortly</a>
+  <ul class="nav-links">
+    <li><a href="#">Features</a></li>
+    <li><a href="#">Pricing</a></li>
+    <li><a href="#">Resources</a></li>
+  </ul>
+  <div class="nav-auth">
+    <a href="#" class="nav-login">Login</a>
+    <a href="#" class="btn btn-cyan">Sign Up</a>
+  </div>
+</nav>
+
+<!-- ─── HERO ─────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>More than just<br>shorter links</h1>
+    <p>Build your brand's recognition and get detailed insights on how your links are performing.</p>
+    <a href="#" class="btn btn-cyan-pill">Get Started</a>
+  </div>
+  <div class="hero-img">
+    <div class="hero-bg-circle"></div>
+    <!-- Inline SVG illustration of person at desk -->
+    <svg class="hero-illustration" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+      <!-- desk -->
+      <rect x="90" y="220" width="320" height="16" rx="8" fill="#2acfcf"/>
+      <rect x="100" y="236" width="14" height="80" rx="7" fill="#2acfcf"/>
+      <rect x="390" y="236" width="14" height="80" rx="7" fill="#2acfcf"/>
+      <!-- chair base -->
+      <ellipse cx="300" cy="322" rx="50" ry="10" fill="#232127" opacity=".15"/>
+      <rect x="284" y="270" width="12" height="52" rx="6" fill="#3a3054"/>
+      <rect x="255" y="316" width="72" height="10" rx="5" fill="#3a3054"/>
+      <!-- monitor -->
+      <rect x="270" y="130" width="140" height="90" rx="8" fill="#2acfcf" opacity=".9"/>
+      <rect x="278" y="138" width="124" height="74" rx="4" fill="#1ba7a7"/>
+      <!-- screen lines -->
+      <rect x="286" y="150" width="60" height="5" rx="3" fill="rgba(255,255,255,.4)"/>
+      <rect x="286" y="162" width="90" height="5" rx="3" fill="rgba(255,255,255,.25)"/>
+      <rect x="286" y="174" width="70" height="5" rx="3" fill="rgba(255,255,255,.25)"/>
+      <!-- monitor stand -->
+      <rect x="332" y="218" width="16" height="20" rx="4" fill="#2acfcf"/>
+      <rect x="314" y="236" width="52" height="8" rx="4" fill="#2acfcf"/>
+      <!-- keyboard -->
+      <rect x="240" y="222" width="120" height="18" rx="4" fill="#3a3054" opacity=".7"/>
+      <!-- person body -->
+      <ellipse cx="220" cy="195" rx="38" ry="48" fill="#2acfcf"/>
+      <!-- person head -->
+      <circle cx="220" cy="140" r="28" fill="#f5c7a9"/>
+      <!-- hair -->
+      <ellipse cx="220" cy="118" rx="28" ry="14" fill="#3a3054"/>
+      <ellipse cx="244" cy="130" rx="10" ry="16" fill="#3a3054"/>
+      <!-- arm reaching to keyboard -->
+      <path d="M248 195 Q268 210 265 225" stroke="#2acfcf" stroke-width="20" stroke-linecap="round" fill="none"/>
+      <!-- legs -->
+      <rect x="198" y="238" width="20" height="55" rx="10" fill="#232127"/>
+      <rect x="222" y="238" width="20" height="55" rx="10" fill="#232127"/>
+      <!-- shoes -->
+      <ellipse cx="208" cy="294" rx="18" ry="8" fill="#232127"/>
+      <ellipse cx="232" cy="294" rx="18" ry="8" fill="#232127"/>
+      <!-- chair seat -->
+      <rect x="180" y="234" width="78" height="16" rx="8" fill="#6c63ff" opacity=".7"/>
+      <rect x="218" y="248" width="12" height="26" rx="6" fill="#6c63ff" opacity=".7"/>
+      <!-- plant pots -->
+      <!-- big plant -->
+      <rect x="105" y="250" width="28" height="24" rx="4" fill="#3a3054"/>
+      <ellipse cx="119" cy="250" rx="14" ry="5" fill="#2e2852"/>
+      <!-- leaves big -->
+      <path d="M119 248 Q100 220 90 200 Q110 208 119 240" fill="#2acfcf"/>
+      <path d="M119 248 Q138 215 150 195 Q135 210 119 240" fill="#2acfcf" opacity=".8"/>
+      <path d="M119 248 Q95 230 80 225 Q100 225 119 240" fill="#1ba7a7"/>
+      <!-- small plant -->
+      <rect x="142" y="265" width="18" height="18" rx="4" fill="#3a3054"/>
+      <ellipse cx="151" cy="265" rx="9" ry="4" fill="#2e2852"/>
+      <path d="M151 264 Q138 248 132 238 Q144 244 151 258" fill="#2acfcf" opacity=".9"/>
+      <path d="M151 264 Q164 245 170 236 Q160 248 151 258" fill="#1ba7a7"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ─── SHORTEN BAR ─────────────────────────────────────────── -->
+<section class="shorten-section">
+  <div class="shorten-bar">
+    <input class="shorten-input" type="text" placeholder="Shorten a link here..."/>
+    <button class="btn-shorten">Shorten It!</button>
+  </div>
+
+  <!-- ─── STATS ──────────────────────────────────────────────── -->
+  <div class="stats-section" style="padding:0;margin-top:0;">
+    <h2>Advanced Statistics</h2>
+    <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+
+    <div class="cards-row">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="22" width="6" height="12" rx="2" fill="#2acfcf"/>
+            <rect x="17" y="14" width="6" height="20" rx="2" fill="#2acfcf"/>
+            <rect x="28" y="8" width="6" height="26" rx="2" fill="#2acfcf"/>
+            <path d="M6 26 L34 10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="34" cy="10" r="3" fill="white"/>
+          </svg>
+        </div>
+        <h3>Brand Recognition</h3>
+        <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="14" stroke="#2acfcf" stroke-width="2.5"/>
+            <path d="M20 10 L20 20 L28 24" stroke="#2acfcf" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="20" cy="20" r="2.5" fill="#2acfcf"/>
+          </svg>
+        </div>
+        <h3>Detailed Records</h3>
+        <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6 L23 14 L32 14 L25 19 L28 28 L20 23 L12 28 L15 19 L8 14 L17 14 Z" stroke="#2acfcf" stroke-width="2" stroke-linejoin="round" fill="none"/>
+            <circle cx="20" cy="32" r="3" fill="#2acfcf"/>
+          </svg>
+        </div>
+        <h3>Fully Customizable</h3>
+        <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA BAND ────────────────────────────────────────────── -->
+<section class="cta-band">
+  <div class="cta-band-waves">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 80 Q360 160 720 80 Q1080 0 1440 80 L1440 200 L0 200 Z" fill="rgba(255,255,255,.03)"/>
+      <path d="M0 120 Q360 50 720 120 Q1080 190 1440 120 L1440 200 L0 200 Z" fill="rgba(255,255,255,.03)"/>
+    </svg>
+  </div>
+  <h2>Boost your links today</h2>
+  <a href="#" class="btn btn-cyan-pill">Get Started</a>
+</section>
+
+<!-- ─── FOOTER ───────────────────────────────────────────────── -->
+<footer>
+  <a href="#" class="footer-logo">Shortly</a>
+
+  <div class="footer-col">
+    <h4>Features</h4>
+    <ul>
+      <li><a href="#">Link Shortening</a></li>
+      <li><a href="#">Branded Links</a></li>
+      <li><a href="#">Analytics</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4>Resources</h4>
+    <ul>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Developers</a></li>
+      <li><a href="#">Support</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4>Company</h4>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Our Team</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-social">
+    <!-- Facebook -->
+    <a href="#">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+      </svg>
+    </a>
+    <!-- Twitter -->
+    <a href="#">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+      </svg>
+    </a>
+    <!-- Pinterest -->
+    <a href="#">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.08 3.16 9.42 7.63 11.17-.1-.93-.2-2.37.04-3.39.22-.9 1.47-6.22 1.47-6.22s-.37-.75-.37-1.86c0-1.75 1.01-3.05 2.27-3.05 1.07 0 1.59.8 1.59 1.77 0 1.08-.69 2.7-1.04 4.19-.3 1.25.62 2.27 1.84 2.27 2.2 0 3.9-2.32 3.9-5.67 0-2.96-2.13-5.03-5.17-5.03-3.52 0-5.59 2.64-5.59 5.37 0 1.06.41 2.2.92 2.82.1.12.11.23.08.35-.09.39-.3 1.25-.34 1.42-.05.23-.18.28-.41.17-1.55-.72-2.51-2.99-2.51-4.81 0-3.91 2.84-7.5 8.19-7.5 4.3 0 7.64 3.07 7.64 7.17 0 4.27-2.69 7.71-6.44 7.71-1.26 0-2.44-.65-2.84-1.42l-.77 2.88c-.28 1.08-1.03 2.42-1.53 3.24.76.24 1.56.36 2.39.36C18.63 24 24 18.63 24 12S18.63 0 12 0z"/>
+      </svg>
+    </a>
+    <!-- Instagram -->
+    <a href="#">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+      </svg>
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
